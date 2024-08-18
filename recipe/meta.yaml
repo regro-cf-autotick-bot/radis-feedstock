@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -53,7 +53,6 @@ requirements:
     - seaborn
     - scipy >=1.4.0
     - lmfit
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
