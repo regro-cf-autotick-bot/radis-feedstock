@@ -1,5 +1,5 @@
 {% set name = "radis" %}
-{% set version = "0.14" %}
+{% set version = "0.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radis-{{ version }}.tar.gz
-  sha256: c23309dcaa0a2f1b5d8fa5a28b2ef63c841bdaaf6a9b10c8bfc3667bb66388a5
+  sha256: 82320a54dd1d133672ef229f4346f5b3d0a6ff5f24a017efa470d890f40ddb2e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -17,12 +17,15 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
+    # build time dependencies
     - python
     - cython
     - numpy
     - pip
   run:
+    # runtime dependencies
     - python
     - astropy
     - astroquery >=0.3.9
@@ -49,7 +52,6 @@ requirements:
     - psutil
     - seaborn
     - scipy >=1.4.0
-    - vaex 
     - lmfit
     - {{ pin_compatible('numpy') }}
 
@@ -66,7 +68,7 @@ about:
   doc_url: https://radis.readthedocs.io/en/latest/
   dev_url: https://github.com/radis/radis
 
-
 extra:
   recipe-maintainers:
-    - arunavabasu-03
+    - arunavabasucom
+    - erwanp
