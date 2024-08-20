@@ -264,5 +264,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@arunavabasu-03](https://github.com/arunavabasu-03/)
+* [@arunavabasucom](https://github.com/arunavabasucom/)
+* [@erwanp](https://github.com/erwanp/)
 
