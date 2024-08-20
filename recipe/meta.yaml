@@ -1,5 +1,5 @@
 {% set name = "radis" %}
-{% set version = "0.15" %}
+{% set version = "0.15.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radis-{{ version }}.tar.gz
-  sha256: 82320a54dd1d133672ef229f4346f5b3d0a6ff5f24a017efa470d890f40ddb2e
+  sha256: 3a32d749e26b3cc713416bb41508ddcee73fd7ae0b6432ccb1f9e4fe28441036
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
